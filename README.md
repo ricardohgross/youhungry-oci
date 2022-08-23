@@ -1,3 +1,11 @@
+# Grupo 3
+
+Nuno Marques
+Ricardo Gross
+Victor Azevedo
+Vitoria Sá
+William Gomes
+
 # Tutorial para o Hack@Cloud Oracle
 
 Sabemos quem nem todas as pessoas possuem conhecimentos na área de desenvolvimento e por isso trouxemos aqui nesse Readme os passos para executar TODAS as tarefas relacionadas a aplicação front-end.
