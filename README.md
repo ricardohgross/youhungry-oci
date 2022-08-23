@@ -1,10 +1,14 @@
 # Grupo 3
 
+````
+
 Nuno Marques
 Ricardo Gross
 Victor Azevedo
 Vitoria Sá
 William Gomes
+
+````
 
 # Tutorial para o Hack@Cloud Oracle
 
