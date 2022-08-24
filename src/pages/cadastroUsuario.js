@@ -11,8 +11,17 @@ import axios from "axios";
 
 const api = axios.create({
     baseURL: "https://int-you-idolbhntaf5o-ia.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/flows/rest/CADASTRO_USUARIO/1.0/"
-})
+  });
+  
+const token = "aGFja2FjbG91ZHRkYzNAZ21haWwuY29tOkhhY2tALWNsb3VkMw=="
 
+const options = {
+	headers:{
+		"Access-Control-Allow-Origin":"*",
+		'Autorization': `Basic ${token}`,		
+	}
+	
+}  
 
 export default class User extends Component {
     
@@ -39,9 +48,9 @@ export default class User extends Component {
 
         submitForm(e){
             e.preventDefault();
-            api.post('usuarios', this.state).then(res => {
-                console.log(res.data)
-            })
+                api.post('usuarios', this.state, options).then(res => {
+                    console.log(res.data)
+                })
         }
 
     render(){
@@ -70,7 +79,7 @@ export default class User extends Component {
                         </Form.Group>
 
                         <Form.Group controlId="formGridendereco">
-                            <Form.Label className="details-form">Endereço</Form.Label>
+                            <Form.Label className="details-form">Enreceço</Form.Label>
                             <Form.Control  className="font-forms" placeholder="Informe o endereço" value={this.state.endereco} onChange={this.changeField.bind(this,'endereco')} />
                         </Form.Group>
 

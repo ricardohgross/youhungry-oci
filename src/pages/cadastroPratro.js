@@ -7,6 +7,12 @@ import Col from 'react-bootstrap/Col';
 import '../css/cprato.css';
 import '../css/index.css';
 import React,{Component} from 'react';
+import axios from "axios";
+
+const api = axios.create({
+    baseURL: "https://g6f68d74390b769-dbdesafio.adb.sa-vinhedo-1.oraclecloudapps.com/ords/mutant/",
+  });
+
 
 export default class Food extends Component {
     
@@ -32,8 +38,11 @@ export default class Food extends Component {
             })
         }
 
-        submitForm(){
-                alert(JSON.stringify(this.state));
+        submitForm(e){
+                e.preventDefault();
+                api.post('pratos/', this.state).then(res => {
+                    console.log(res.data)
+                })
         }
 
     render(){
@@ -56,10 +65,12 @@ export default class Food extends Component {
                         <Form.Row>
                         <Form.Group as={Col} controlId="formGridendereco">
                             <Form.Label className="details-form">Restaurante</Form.Label>
-                            <Form.Control  as="select"  className="font-forms select-forms" placeholder="Informe o endereço" value={this.state.restaurante} onChange={this.changeField.bind(this,'restaurante')} >
+                            <Form.Control  className="font-forms" type="text" placeholder="Informe o restaurante" value={this.state.restaurante} onChange={this.changeField.bind(this,'restaurante')} />
+
+                            {/* <Form.Control  as="select"  className="font-forms select-forms" placeholder="Informe o endereço" value={this.state.restaurante} onChange={this.changeField.bind(this,'restaurante')} >
                                 <option>Restaurante 1</option>
                                 <option>Restaurante 2</option>
-                            </Form.Control>
+                            </Form.Control> */}
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridPreco">
                             <Form.Label className="details-form">Preço do prato</Form.Label>
@@ -74,10 +85,8 @@ export default class Food extends Component {
 
                             <Form.Group as={Col} controlId="formGridAcompanhamento">
                             <Form.Label className="details-form">Acompanhamento</Form.Label>
-                            <Form.Control className="font-forms select-forms" as="select"  placeholder="Selecione o acompanhamento" value={this.state.acompanhamento} onChange={this.changeField.bind(this,'acompanhamento')}  >
-                                <option>Acompanhamento 1</option>
-                                <option>Acompanhamento 2</option>
-                            </Form.Control>
+                            <Form.Control  className="font-forms" type="text" placeholder="Informe o acompanhamento" value={this.state.acompanhamento} onChange={this.changeField.bind(this,'acompanhamento')} />
+
                             </Form.Group>
                         </Form.Row>
                         <Form.Group controlId="formGridNome">

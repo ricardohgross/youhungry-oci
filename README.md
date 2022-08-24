@@ -1,72 +1,70 @@
-# Grupo 3
+# Getting Started with Create React App
 
-````
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Nuno Marques
-Ricardo Gross
-Victor Azevedo
-Vitoria Sá
-William Gomes
+## Available Scripts
 
-````
+In the project directory, you can run:
 
-# Tutorial para o Hack@Cloud Oracle
+### `yarn start`
 
-Sabemos quem nem todas as pessoas possuem conhecimentos na área de desenvolvimento e por isso trouxemos aqui nesse Readme os passos para executar TODAS as tarefas relacionadas a aplicação front-end.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Caso você seja um competidor que gosta de jogar no modo HARD, sugerimos que tente executar as tarefas sem visualizar as nossas dicas e se por algum motivo não conseguir, venha aqui e veja a solução para o seu problema :)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Instalações de ferramentas, clonagem do projeto e execução local
+### `yarn test`
 
-Temos um vídeo prontinho, mostrando como instalar tudo que você precisa no seu computador, como utilizar o git para clonar e por fim mostramos como rodar localmente o projeto. Para assistir o video é só clicar nesse link aqui: 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-[Desistiu de jogar no Hard? Clique aqui rs](https://videohub.oracle.com/media/Hack%40Cloud+-+Como+subir+aplica%C3%A7%C3%A3o+web+em+react+no+ambiente+local/1_f3i78dj0)
+### `yarn build`
 
-# Codificação dos métodos de cadastro e build no container local
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Se chegou a hora de codificar sua aplicação e bateu aquela dúvida de como fazer um CRUD no react.js, fique tranquilo(a). Aqui nesse link ja temos um video mostrando como fazer todos os steps para você codar os métodos, gerar uma imagem docker e rodar sua aplicação em um container local. Acesse o link abaixo:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-[Já cansou de tentar? Clique aqui rs](https://videohub.oracle.com/media/Hack%40Cloud+-+Codificando+e+rodando+app+no+Docker/1_uu5z84mh)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### IMPORTANTE - CORS
+### `yarn eject`
 
-Durante as integrações entre front-end e o endpoint back-end, podemos receber alguns erros de **Access-Control-Allow-Origin** o famoso **CORS**. Para resolver esse problema, também fizemos um vídeo explicando como configurar sua requisição, para fazer autenticação de forma correta e liberar o CORS via header. Acesse o link abaixo: 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-[Liberando CORS](https://videohub.oracle.com/media/Hack%40Cloud+-+Liberando+CORS+para+POST/1_k55o2zzq)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Atenção: Dica para rodar o projeto em container
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Nossa aplicação possui uma peculiaridade. É necessário fazer uma única alteração para que ela consiga rodar dentro do container tanto local como no OKE da Oracle.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Hoje no nosso arquivo package.json temos o seguinte script:
+## Learn More
 
-````
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-````
+### Code Splitting
 
-Precisaremos fazer uma unica alteração e colocar esse trecho no start
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### `--openssl-legacy-provider`
+### Analyzing the Bundle Size
 
-O código ficara assim: 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-````
+### Making a Progressive Web App
 
-  "scripts": {
-    "start": "react-scripts --openssl-legacy-provide start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-````
+### Advanced Configuration
 
-Pronto, agora podemos gerar a imagem docker e colocar pra rodar no container. Para rodar novamente a aplicação localmente, remova o trecho que tudo voltará ao normal.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
