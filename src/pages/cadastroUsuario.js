@@ -9,8 +9,8 @@ import '../css/index.css';
 import React,{Component} from 'react';
 import axios from "axios";
 
-const api = axios.create({
-    baseURL: "https://int-you-idolbhntaf5o-ia.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/flows/rest/CADASTRO_USUARIO/1.0/"
+const api = axios.create({             
+    baseURL: "https://int-you-idolbhntaf5o-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/CADASTRO_USUARIO/1.0"
   });
   
 const token = "aGFja2FjbG91ZHRkYzNAZ21haWwuY29tOkhhY2tALWNsb3VkMw=="
@@ -18,7 +18,7 @@ const token = "aGFja2FjbG91ZHRkYzNAZ21haWwuY29tOkhhY2tALWNsb3VkMw=="
 const options = {
 	headers:{
 		"Access-Control-Allow-Origin":"*",
-		'Autorization': `Basic ${token}`,		
+		'Authorization': `Basic ${token}`,		
 	}
 	
 }  
@@ -48,7 +48,7 @@ export default class User extends Component {
 
         submitForm(e){
             e.preventDefault();
-                api.post('usuarios', this.state, options).then(res => {
+                api.post('/usuarios', this.state, options).then(res => {
                     console.log(res.data)
                 })
         }

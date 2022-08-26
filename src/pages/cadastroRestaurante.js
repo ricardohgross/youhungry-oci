@@ -10,10 +10,10 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://hackacloud-oic-ax1wnzehpspk-vc.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/RESTAURANTE_DESAFIO/1.0",
+    baseURL: "https://int-you-idolbhntaf5o-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/CADASTRORESTAURANTE/1.0",
 });
 
-const token = "aGFja2FjbG91ZG11dGFudGxhYjpoQGNrQENMb3VEJDIwMjI="
+const token = "aGFja2FjbG91ZHRkYzNAZ21haWwuY29tOkhhY2tALWNsb3VkMw=="
 
 const options = {
     headers: {
